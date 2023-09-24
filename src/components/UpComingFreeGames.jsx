@@ -3,13 +3,23 @@ import useFetch from '../utils/useFetch'
 
 const UpComingFreeGames = () => {
 
-    const {data}=useFetch("epic-free-games-coming-soon")
+    const {games}=useFetch("epic-free-games-coming-soon")
 
   return (
     <div>
         <h2>Free Games coming soon</h2>
-        <p>{'coming soon'}</p>
-        {console.log("coming soon-",data)}
+        <div>
+            {games.map((game) => {
+              return(
+                <div>
+                    <img src={game.offerImageTall} height={100} width={100} alt="free-game" />
+                    <p>{game.name}</p>
+                    <h4>{game.originalPrice}</h4>
+                </div>
+              )
+            }
+            )}
+        </div>
     </div>
   )
 }
