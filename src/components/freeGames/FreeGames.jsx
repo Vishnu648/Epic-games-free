@@ -4,24 +4,29 @@ import styles from './freeGames.module.css'
 
 const FreeGames = () => {
 
-    const {games}=useFetch("epic-free-games")
+  const { games } = useFetch("epic-free-games")
 
   return (
     <div className={styles.freeGamesContainer}>
-        <h2>Free Games</h2>
-        <div>
-            {games.map((game) => {
-              return(
-                <div>
-                    <img src={game.offerImageTall} height={100} width={100} alt="free-game" />
-                    <p>{game.name}</p>
-                    <h4>{game.originalPrice}</h4>
+      <h2>Free Games</h2>
+      <div className={styles.gameContainer}>
+          {games.map((game) => {
+            return (
+              <div title={game.name} className={styles.card}>
+                <img src={game.offerImageTall} className={styles.imgCard} alt="free-game" />
+                <div className={styles.details}>
+                  <p id={styles.name}>{game.name}</p>
+                  <p>by</p>
+                  <p id={styles.publisher}>{game.publisher}</p>
                 </div>
-              )
-            }
-            )}
-        </div>
-        
+
+              </div>
+            )
+          }
+          )}
+
+      </div>
+
     </div>
   )
 }

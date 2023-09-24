@@ -11,7 +11,7 @@ const App = () => {
       <Header/>
       <FreeGames/>
       <UpComingFreeGames/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
