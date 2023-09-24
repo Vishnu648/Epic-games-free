@@ -1,13 +1,13 @@
 import React from 'react'
-import useFetch from '../utils/useFetch'
+import useFetch from '../../utils/useFetch'
 
-const UpComingFreeGames = () => {
+const FreeGames = () => {
 
-    const {games}=useFetch("epic-free-games-coming-soon")
+    const {games}=useFetch("epic-free-games")
 
   return (
     <div>
-        <h2>Free Games coming soon</h2>
+        <h2>Free Games</h2>
         <div>
             {games.map((game) => {
               return(
@@ -20,10 +20,11 @@ const UpComingFreeGames = () => {
             }
             )}
         </div>
+        
     </div>
   )
 }
 
-export default UpComingFreeGames
+export default FreeGames
 
-// epic-free-games-coming-soon
+// /epic-free-games

@@ -29,7 +29,7 @@ const useFetch = (endpoint) => {
     };
 
     useEffect(() => {
-        fetchData();
+        // fetchData();
     }, [])
 
     return {games}
