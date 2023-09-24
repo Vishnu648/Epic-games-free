@@ -2,6 +2,8 @@ import React from 'react'
 import FreeGames from './components/freeGames/FreeGames'
 import UpComingFreeGames from './components/comingSoon/UpComingFreeGames'
 import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+
 
 const App = () => {
   return (
@@ -9,6 +11,7 @@ const App = () => {
       <Header/>
       <FreeGames/>
       <UpComingFreeGames/>
+      <Footer/>
     </div>
   )
 }

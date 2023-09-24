@@ -1,12 +1,13 @@
 import React from 'react'
-import useFetch from '../../utils/useFetch'
+import useFetch from '../../utils/useFetch';
+import styles from './freeGames.module.css'
 
 const FreeGames = () => {
 
     const {games}=useFetch("epic-free-games")
 
   return (
-    <div>
+    <div className={styles.freeGamesContainer}>
         <h2>Free Games</h2>
         <div>
             {games.map((game) => {
